@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sono", sans-serif;
+  background-color: #ddd;
+}
+
+div.pricing-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+div.pricing-plan {
+  /* external flexbox */
+  flex-basis: 350px;
+  /* internal flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* other styles*/
+  min-height: 600px;
+  background-color: white;
+  text-align: center;
+  border-radius: 20px 20px 20px 20px;
+}
+
+div.pricing-plan div.plan-title {
+  padding: 60px 0;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 48px;
+  border-radius: 20px 20px 0 0;
+}
+
+div.pricing-plan div.plan-price,
+div.pricing-plan ul.plan-features {
+  padding: 30px;
+}
+
+div.pricing-plan div.plan-price {
+  margin-top: 20px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+div.pricing-plan div.plan-price span.month {
+  font-size: 26px;
+  font-weight: normal;
+}
+
+div.pricing-plan ul.plan-features {
+  flex-basis: 150px;
+  text-align: justify;
+  list-style: none;
+}
+
+div.pricing-plan button.plan-button {
+  margin: 15px 0 40px;
+  padding: 15px 50px;
+  max-width: 200px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+div.pricing-plan:nth-child(1) div.plan-title,
+div.pricing-plan:nth-child(1) button.plan-button,
+div.pricing-plan:nth-child(1) ul.plan-features .fa-check {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+div.pricing-plan:nth-child(2) div.plan-title,
+div.pricing-plan:nth-child(2) button.plan-button,
+div.pricing-plan:nth-child(2) ul.plan-features .fa-check {
+  background-image: linear-gradient(43deg, #c850c0 0%, #ffcc70 100%);
+}
+
+div.pricing-plan:nth-child(3) div.plan-title,
+div.pricing-plan:nth-child(3) button.plan-button,
+div.pricing-plan:nth-child(3) ul.plan-features .fa-check {
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+}
+
+div.pricing-plan ul.plan-features li {
+  margin: 0 0 5px 0;
+}
+
+div.pricing-plan ul.plan-features .fa-check {
+  padding: 4px;
+  color: white;
+  border-radius: 50%;
+}
+
+@media (max-width: 1250px) {
+  div.pricing-container {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  div.pricing-plan {
+    max-width: 450px;
+    min-height: 650px;
+  }
+  div.pricing-plan ul.plan-features {
+    padding: 10px 60px;
+    flex-basis: 150px;
+    flex-shrink: 0;
+  }
+  div.pricing-plan button.plan-button {
+    margin: 15px 0 40px;
+  }
+}
